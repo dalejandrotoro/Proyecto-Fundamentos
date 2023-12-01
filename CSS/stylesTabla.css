@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header styles */
+header {
+    background-color: #063970;
+    color: #fff;
+    padding: 30px 20px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 2.5rem;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+}
+
+li {
+    margin-right: 50px;
+    font-size: 20px;
+}
+li:hover{
+    background-color: #9dc7f5;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Logout button styles */
+.cerrar-sesion {
+    cursor: pointer;
+    border: 1px solid #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+.ver-detalle {
+    cursor: pointer;
+    border: 1px solid #063970;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.cerrar-sesion:hover {
+    background-color: #fff;
+    color: #333;
+}
+.ver-detalle:hover {
+    background-color: #042243;
+    color: #333;
+}
+
+
+/* Footer styles */
+footer {
+    background-color: #063970;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto;
+}
+
+.redes-sociales {
+    margin-bottom: 10px;
+}
+
+.info-tienda {
+    font-size: 0.8rem;
+}
+
+/* Table styles */
+.main {
+    margin: 50px;
+}
+
+.producto {
+    margin: 40px auto; /* Center the table */
+    width: 90%;
+    border-collapse: collapse;
+}
+
+.producto th, .producto td {
+    border: 1px solid #c2c0c0;
+    padding: 8px;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.producto th {
+    background-color: #38618d;
+    color: #cdd7e2;
+}
+
+.producto tbody tr:nth-child(even) {
+    background-color: #9bb0c6;
+}
+
+/* Button styles for actions */
+.acciones {
+    display: flex;
+    justify-content: space-between;
+}
+
+.acciones button {
+    cursor: pointer;
+    border: none;
+    padding: 8px 15px; /* Improved padding for better button appearance */
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.acciones button:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    ul {
+        margin-top: 10px;
+    }
+
+    li {
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+}

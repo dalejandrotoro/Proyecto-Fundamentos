@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Página</title>
+    <link rel="stylesheet" href="../ProyectoFinal/CSS/stilo.css">
+</head>
+
+<body>
+    <!-- Encabezado -->
+    <header class="header">
+        <main class="menu container">
+            <img class="logo" src="../ProyectoFinal/imagen/logo.png" style="width: 6%; height: auto;">
+            <input type="checkbox" id="menu" />
+            <label for="menu">
+                <img src="../ProyectoFinal/Imagenes/menu.png" class="menu-icono" alt="menu">
+            </label>
+
+            <!-- Menú de Navegación -->
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#">Puntos Saludables</a></li>
+                    <li><a href="#">Protégete del sol</a></li>
+                    <li><a href="#">Enterogermina</a></li>
+                    <li><a href="#">Fórmulas infantiles</a></li>
+                </ul>
+            </nav>
+            <button type="submit" class="btn-2">Cerrar Sesión</button>
+        </main> <!-- Cierre del contenedor del menú -->
+
+        <!-- Contenido del Encabezado -->
+
+        <div class="header-txt">
+            <h1>Ofertas Imperdibles</h1>
+        </div>
+    </header>
+    <div class="filter-container">
+        <label for="filterPrice">Filtrar por Precio:</label>
+        <select id="filterPrice" onchange="applyFilters()">
+            <option value="all">Todos</option>
+            <option value="200000">$200000</option>
+            <option value="10000">$10000</option>
+            <option value="200000">$200000</option>
+            <!-- Agrega más opciones según sea necesario -->
+        </select>
+    </div>
+    
+    <div>
+        <label for="filterName">Filtrar por Nombre:</label>
+        <input type="text" id="filterName" oninput="applyFilters()" placeholder="Nombre">
+    </div>
+    
+    
+    <main class="products container product-content precio" id="product-container"></main>
+
+    <!-- Paginación -->
+    <div id="pagination"></div>
+    <div id="nav-buttons">
+        <button class="btn-2" onclick="prevPage()">Atrás</button>
+        <button id="nextButton" class="btn-2" onclick="nextPage()">Siguiente</button>
+    </div>
+    <div id="pageInfo"></div>
+
+    <!-- Popup de Tarjeta -->
+    <div id="popupCard"></div>
+
+    <!-- Pie de Página -->
+    <footer class="footer">
+        <div class="footer-content container">
+            <!-- Enlaces de Productos -->
+            <div class="link">
+                <h3>Nosotros</h3>
+                <ul>
+                    <li><a href="">¿Quiénes somos?</a></li>
+                    <li><a href="">Preguntas frecuentes</a></li>
+                    <li><a href="">Políticas y términos de uso</a></li>
+                    <li><a href="">Puntos Saludables</a></li>
+                    <li><a href="">Términos y condiciones de puntos saludables</a></li>
+                </ul>
+            </div>
+
+            <!-- Enlaces de Deportes -->
+            <div class="link">
+                <h3>Enlaces de interés</h3>
+                <ul>
+                    <li><a href="">SIC (Superintendencia de Industria y Comercio).</a></li>
+                    <li><a href="">Superfinanciera</a></li>
+                    <li><a href="">Crear una cuenta en MercadoPago</a></li>
+                    <li><a href="">Cómo retirar el dinero de MercadoPago</a></li>
+                </ul>
+            </div>
+
+            <!-- Enlaces de Asistencia -->
+            <div class="link">
+                <h3>Contáctanos</h3>
+                <ul>
+                    <li><a href="">PQRS</a></li>
+                    <li><a href="">Líneas de atención call center</a></li>
+                    <li><a href="">Barranquilla 605 3111155</a></li>
+                    <li><a href="">Cali 605 3111155</a></li>
+                </ul>
+            </div>
+            <div class="link">
+                <h3>SÍGUENOS</h3>
+                <ul>
+                    <li><i class='bx bxl-facebook-square bx-md' style='color:#3368ff'></i></li>
+                    <li><i class='bx bxl-instagram bx-md' style='color:rgba(224,118,14,0.95)'></i></li>
+                    <li><i class='bx bxl-twitter bx-md' style='color:rgba(76,183,255,0.95)'></i></li>
+                    <li><i class='bx bxl-youtube bx-md' style='color:rgba(234,14,14,0.95)'></i></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../ProyectoFinal/JS/Produc-Drogueria.js"></script>
+
+</body>
+
+</html>
